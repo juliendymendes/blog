@@ -7,10 +7,18 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+		<nav class="navbar">
+			<ul>
+				<li><span class="material-symbols-outlined"> book </span></li>
+				<li><%= link_to 'Home', books_path() %></li>
+				<li><%= link_to 'Add new book', new_book_path() %></li>
+			</ul>
+		</nav>
     <%= yield %>
   </body>
 </html>

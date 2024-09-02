@@ -1,5 +1,12 @@
 
-<% @books.each do |book|%>
-<h1><%= book.title %></h1>
-
-<% end%>
+<h1>Books I read this year</h1>
+<div class="item-list">
+	<% @books.each do |book|%>
+		<div class="book-card">
+			<h2><%= link_to book.title, book %></h2>
+			<p><%= book.author %></p>
+			<p><%= book.description %></p>
+			<p><%= book.rating %></p>
+		</div>
+	<% end%>
+</div>
